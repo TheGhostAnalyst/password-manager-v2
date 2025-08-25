@@ -4,7 +4,7 @@ import shelve
 
 
 def save(app, contact, password):
-    with shelve.open('Manager', writeback=True) as db:
+   with shelve.open('Manager', writeback=True) as db:
          now  = datetime.now().strftime('%Y-%m-%d %H:%M')
          if app in db:
             if isinstance(db[app], list):
@@ -13,6 +13,7 @@ def save(app, contact, password):
                db[app] = [{'Contact': contact, 'Password': password, 'Date saved': now}]
          else:
             db[app] = [{'Contact': contact, 'Password': password, 'Date saved': now}]
+   
 
 def search(app):
    with shelve.open('Manager') as db:
@@ -56,6 +57,7 @@ while True:
             contact = input('Enter your phone number, email or username: ')
             password = input('Enter your password for the app or website you want to save: ')
             save(app_name, contact, password)
+            print('Details saved successfully! in Ghost Database')
 
       elif first == 2:
             search_web = input('What app or website do you want to search for: ').lower()
@@ -69,3 +71,4 @@ while True:
    except KeyboardInterrupt:
       print("Exit successful")
       break
+    
