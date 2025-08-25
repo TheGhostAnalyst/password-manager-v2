@@ -31,7 +31,7 @@ This version leverages `shelve` to act like a persistent dictionary, storing app
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/password-manager-v2.git
+git clone https://github.com/TheGhostAnalyst/password-manager-v2.git
 cd password-manager-v2
 ````
 
