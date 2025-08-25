@@ -46,11 +46,11 @@ while True:
    try:
       print('\nPassword manager tool by The Ghost Analyst')
       first = Pyip.inputNum("""Which of these operations would you like to perform:
-      1. Save a new password
-      2. Find likely websites you stored passwords for 
-      3. Show all saved passwords   
-      4. Exit                  
-      >>>>>> """)
+1. Save a new password
+2. Find likely websites you stored passwords for 
+3. Show all saved passwords   
+4. Exit                  
+============ """)
       if first == 1:
             print('Save a new password')
             app_name = input('Enter the website or app you want to save password for: ').lower()
@@ -71,4 +71,5 @@ while True:
    except KeyboardInterrupt:
       print("Exit successful")
       break
+
     
