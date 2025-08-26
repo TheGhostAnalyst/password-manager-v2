@@ -50,7 +50,7 @@ while True:
 2. Find likely websites you stored passwords for 
 3. Show all saved passwords   
 4. Exit                  
-============ """)
+============ """, min=1, max=4)
       if first == 1:
             print('Save a new password')
             app_name = input('Enter the website or app you want to save password for: ').lower()
